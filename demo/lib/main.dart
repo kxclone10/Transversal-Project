@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
-      //appBar:MyAppBar(),
+      appBar:MyAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -143,23 +143,15 @@ class LogoSection extends StatelessWidget{
   }
 }
 
-/*
+
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   Size get preferredSize => new Size.fromHeight(50);
   @override
   Widget build(BuildContext context){
     return AppBar(
-      leading: IconButton(
-        icon: Icon(
-          Icons.arrow_back,
-          color: Colors.grey[800],
-          size: 20,
-        ),
-        onPressed: null,
-      ),
       centerTitle: true,
       title: Text(
-        'Accueil',
+        'Inscription',
         style: GoogleFonts.nunito(
           color: Colors.black,
           fontSize: 22,
@@ -169,7 +161,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
       backgroundColor: Colors.white,
     );
   }
-}*/
+}
 
 
 

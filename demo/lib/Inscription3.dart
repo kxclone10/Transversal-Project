@@ -9,7 +9,7 @@ class Inscription extends StatelessWidget{  //  Je suis ici, c'est ce que je dev
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
-      //appBar:MyAppBar(),
+      appBar:MyAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -182,7 +182,24 @@ class LogoSection extends StatelessWidget{
 
 
 
-
+class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
+  Size get preferredSize => new Size.fromHeight(50);
+  @override
+  Widget build(BuildContext context){
+    return AppBar(
+      centerTitle: true,
+      title: Text(
+        'Inscription',
+        style: GoogleFonts.nunito(
+          color: Colors.black,
+          fontSize: 22,
+          fontWeight: FontWeight.w800,
+        ),
+      ),
+      backgroundColor: Colors.white,
+    );
+  }
+}
 
 
 

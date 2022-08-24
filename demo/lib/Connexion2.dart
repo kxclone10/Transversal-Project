@@ -1,3 +1,4 @@
+import 'package:demo/Connexion1.dart';
 import 'package:demo/Connexion3.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,7 +9,7 @@ class Connexion2 extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
-      //appBar:MyAppBar(),
+      appBar:MyAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -129,7 +130,6 @@ class LogoSection extends StatelessWidget{
     );
   }
 }
-/*
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   Size get preferredSize => new Size.fromHeight(50);
@@ -142,11 +142,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
           color: Colors.grey[800],
           size: 20,
         ),
-        onPressed: null,
+        onPressed:() {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) =>Connexion1()));
+        },
       ),
       centerTitle: true,
       title: Text(
-        'Accueil',
+        'Connexion',
         style: GoogleFonts.nunito(
           color: Colors.black,
           fontSize: 22,
@@ -157,7 +160,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
     );
   }
 }
-*/
+
 
 
 class EnterOTP extends StatelessWidget {

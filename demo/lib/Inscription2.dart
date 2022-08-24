@@ -1,14 +1,18 @@
 import 'package:demo/Inscription3.dart';
+import 'package:demo/main.dart';
+import 'package:demo/parametre1.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: constant_identifier_names
 class Code extends StatelessWidget{
+  const Code({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.white,
-      //appBar:MyAppBar(),
+      appBar:MyAppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -94,7 +98,7 @@ class MyInputField extends State<InputSection>{
                     ),
                     onTap: () {
                       Navigator.push(
-                          context, MaterialPageRoute(builder: (context) => Code()));
+                          context, MaterialPageRoute(builder: (context) => Param1()));
                     }
                 ),
             )
@@ -129,7 +133,7 @@ class LogoSection extends StatelessWidget{
     );
   }
 }
-/*
+
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   Size get preferredSize => new Size.fromHeight(50);
@@ -142,11 +146,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
           color: Colors.grey[800],
           size: 20,
         ),
-        onPressed: null,
+        onPressed:() {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const MyApp()));
+        },
       ),
       centerTitle: true,
       title: Text(
-        'Accueil',
+        'Inscription',
         style: GoogleFonts.nunito(
           color: Colors.black,
           fontSize: 22,
@@ -157,7 +164,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
     );
   }
 }
-*/
 
 
 class EnterOTP extends StatelessWidget {
